@@ -1,0 +1,131 @@
+.press-screen{	
+	padding: 95px 0 70px;
+	@include bp(md){
+		padding: 75px 0 55px;
+	}
+	@include bp(sm){
+		padding: 55px 0 40px;
+	}
+}
+
+.press-list{
+	margin-top: 90px;
+	margin-bottom: 70px;
+	@include bp(md){
+		margin-top: 70px;
+		margin-bottom: 50px;
+	}
+	@include bp(sm){
+		margin-top: 40px;
+		margin-bottom: 40px;
+	}
+	&.left{
+		padding-right: 30px;
+		@include bp(md){
+			display: none;
+		}
+		@include bp(sm){
+			padding: 0 15px;
+		}
+	}
+	&.right{
+		padding-left: 30px;
+		@include bp(md){
+			padding: 0 15px;
+		}
+		@include bp(sm){
+			padding: 0 15px;
+		}
+	}
+}
+
+.press-item{
+	padding-bottom: 45px;
+	padding-top: 75px;
+	position: relative;
+	border-bottom: 1px solid #efefef;
+	&:before{
+		position: absolute;
+		content: '';
+		width: 40px;
+		height: 2px;
+		background-color: #a9dad9;
+		top: 48px;
+	}
+}
+
+.press-item__header{
+	display: flex;
+	align-items: flex-end;
+	height: 35px;
+}
+
+.press-item__pic{
+	height: 100%;
+	object-fit: contain;
+}
+
+.press-item__date{
+	font-size: 14px;
+	color: #d3d3d3;
+	margin-left: 15px;
+}
+
+.press-item__title-wrapper{
+	margin-top: 30px;
+    color: #0c1319;
+    display: block;
+    &:hover, &:focus{
+    	color: #65aaa9;
+    	text-decoration: none;
+    	.press-item__link{
+    		color: #65aaa9;
+    	}
+    }
+}
+
+.press-item__title{
+	font-family: "PTSerif-Bold";
+	font-size: 24px;
+    line-height: 36px;
+    cursor: pointer;
+    background-size: 1px 1em;
+    box-shadow: inset 0 -1px #fff, inset 0 -2px #a9dad9;
+    display: inline;
+	@include bp(sm){
+		font-size: 20px;
+		line-height: 28px;
+	}
+}
+
+.press-item__link{
+	color: #a9dad9;
+}
+
+.press-item__descr{
+	font-size: 16px;
+	line-height: 28px;
+	color: #0c1319;
+	margin-bottom: 0;
+	margin-top: 25px;
+}
+
+.press-btn{
+	display: block;
+	margin: 0 auto;
+	transition: .1s linear;
+	width: 144px;
+	height: 45px;
+	line-height: 45px;
+	text-align: center;
+	color: #fff;
+	font-family: "Mukta-Bold";
+	background-color: #0c1319;
+	border-radius: 2px;
+	&:hover, &:focus{
+		color: #fff;
+		background-color: #1e3344;
+		text-decoration: none;
+		box-shadow: 4px 6px 25px rgba(12, 19, 25, 0.2);
+	}
+}

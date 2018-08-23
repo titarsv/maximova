@@ -1,0 +1,11 @@
+.main-press{
+	.press-screen{
+		padding-top: 0px;
+		@include bp(md){
+			padding-top: 15px;
+		}
+	}
+	.press-list{
+		margin-top: 0;
+	}
+}

@@ -1,0 +1,140 @@
+.articles-screen{
+	background-color: #f3f9fa;
+	padding: 95px 0 70px;
+	@include bp(md){
+		padding: 75px 0 55px;
+	}
+	@include bp(sm){
+		padding: 55px 0 40px;
+	}
+}
+
+.articles-list{
+	margin-top: 70px;
+	margin-bottom: 90px;
+	@include bp(md){
+		margin-top: 55px;
+		margin-bottom: 45px;
+	}
+	@include bp(sm){
+		margin-top: 40px;
+	}
+}
+
+.articles-item{
+	&:nth-child(odd){
+		padding-right: 30px;
+		@include bp(md){
+			padding-right: 15px;
+		}
+	}
+	&:nth-child(even){
+		padding-left: 30px;
+		@include bp(md){
+			padding-left: 15px;
+			display: none;
+		}
+	}
+}
+
+.articles-item__wrapper{
+	display: block;
+	float: none;
+	&:hover, &:focus{
+		text-decoration: none;
+		.articles-item__pic-wrapper{
+			box-shadow: 4px 6px 25px rgba(12, 19, 25, 0.3);
+			&:after{
+				height: 8px;
+				opacity: 1;
+			}
+		}
+		.articles-item__title{
+			color: #65aaa9;
+		}
+	}
+}
+
+.articles-item__pic-wrapper{
+	position: relative;
+	box-shadow: 4px 6px 25px rgba(12, 19, 25, 0.2);
+	margin-bottom: 10px;
+	@include bp(md){
+		height: 41vw;
+		min-height: 316px;
+	}
+	@include bp(sm){
+		height: 62vw;
+		min-height: 200px;
+	}
+	&:after{
+		position: absolute;
+		z-index: 2;
+		content: '';
+		width: 100%;
+		height: 4px;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		background-color: #5abbba;
+		transition: .2s linear;
+		opacity: 0.8;
+	}
+
+}
+
+.articles-item__pic{
+	width: 100%;
+	object-fit: cover;
+	@include bp(md){
+		height: 100%;
+	}
+}
+
+.articles-item__title{	
+	font-family: "PTSerif-Bold";
+	font-size: 24px;
+	color: #0c1319;
+    line-height: 36px;
+    cursor: pointer;
+    background-size: 1px 1em;
+    box-shadow: inset 0 -1px #fff, inset 0 -2px #a9dad9;
+    display: inline;
+	@include bp(sm){
+		font-size: 20px;
+		line-height: 28px;
+	}
+}
+
+.articles-item__date{
+	font-family: "PTSerif-Regular";
+	font-size: 14px;
+	color: #adadad;
+	line-height: 22px;
+	display: block;
+	margin-top: 10px;
+}
+
+.articles-item__descr{
+	font-size: 16px;
+	line-height: 28px;
+	color: #0c1319;
+	height: 84px;
+	overflow: hidden;
+	margin-top: 15px;
+}
+
+.articles-item__btn{
+	font-family: "Mukta-ExtraBold";
+	display: inline-block;
+	margin-top: 20px;
+	font-size: 16px;
+	line-height: 16px;
+	text-transform: uppercase;
+	text-decoration: none;
+	border-bottom: 2px solid #a9dad9;
+	&:hover, &:focus{
+		color: #65aaa9;
+		text-decoration: none;
+	}
+}

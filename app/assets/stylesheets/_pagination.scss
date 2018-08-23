@@ -1,0 +1,28 @@
+.pagination-list{
+	font-family: "Mukta-Bold";
+	font-size: 16px;
+	margin-top: 10px;
+	margin-bottom: 20px;
+	height: 20px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.pagination-item{
+	&.spacer{
+		padding: 0 10px;
+		color: #d4eaf2;
+	}
+	&.current{
+		color: #a9dad9;
+		font-family: "Mukta-Regular";
+	}
+	a{
+		color: #0c1319;
+		&:hover, &:focus{
+			color: #65aaa9;
+			text-decoration: none;
+		}
+	}
+}

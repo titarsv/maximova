@@ -1,0 +1,26 @@
+.breadcrumbs{
+	font-size: 14px;
+	line-height: 22px;
+	margin-top: 20px;
+	margin-bottom: 30px;
+	@include bp(sm){
+		text-align: center;
+	}
+}
+
+.breadcrumbs-item{
+	display: inline;
+	&.spacer{
+		padding: 0 6px;
+	}
+	a{
+		color: #0c1319;
+		&:hover, &:focus{
+			color: #0c1319;
+			text-decoration: none;
+		}
+	}
+	span{
+		color: #c8c8c8;
+	}
+}

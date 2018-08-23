@@ -1,0 +1,252 @@
+.contacts-txt-screen{
+	color: #fff;
+	margin-top: 40px;
+	.lg-container{
+		height: inherit;
+	}
+	@include bp(lg){
+		background: url(../images/solutions-bg.jpg) no-repeat center;
+		height: 720px;
+		background-size: cover;
+	}
+	@include bp(sm){
+		height: 86vw;
+	}
+}
+
+.contacts-txt-wrapper{
+	background: url(../images/solutions-bg.jpg) no-repeat center;
+	min-height: 720px;
+	position: relative;
+	background-size: cover;
+	padding-left: 610px;
+	padding-top: 105px;
+	padding-right: 72px;
+	@include bp(lg){
+		background: none;
+		padding-left: 440px;
+    	padding-top: 80px;
+    	padding-right: 15px;
+	}
+	@include bp(md){
+		padding-left: 280px;
+		padding-right: 0px;
+		padding-top: 30px;
+	}
+	@include bp(sm){
+		padding-left: 36vw;
+		padding-right: 0;
+		padding-top: 0;
+		min-height: auto;
+		height: inherit;
+		display: flex;
+		align-items: center;
+	}
+}
+
+.contacts-txt-title{
+	font-size: 24px;
+	line-height: 32px;
+	font-family: "PTSerif-Bold";
+	@include bp(sm){
+		font-size: 20px;
+		line-height: 28px;
+	}
+}
+
+.contacts-txt-list{
+	font-size: 18px;
+	line-height: 32px;
+	margin-top: 30px;
+	li{
+		position: relative;
+		padding-left: 20px;
+		margin-bottom: 20px;
+		&:before{
+			content: '—';
+			position: absolute;
+			font-family: "Mukta-Bold";
+			font-size: 18px;
+			line-height: 32px;
+			left: 0;
+		}
+		strong{
+			font-family: "Mukta-Bold";
+		}
+		div{
+			font-family: "Mukta-Regular";
+		}
+		a{
+			background-size: 1px 1em;
+		    box-shadow: inset 0px -2px #a9dad9;
+		    display: inline;
+		    color: #fff;
+		    &:hover, &:focus{
+		    	text-decoration: none;
+		    	color: #fff;
+		    }
+		}
+	}
+	@include bp(sm){
+		display: none;
+	}
+}
+
+.additional-contacts-txt-screen{
+	display: none;
+	padding: 20px 0 0;
+	.contacts-txt-list{
+		display: block;
+		font-size: 16px;
+		line-height: 28px;
+		margin: 0;
+		li{
+			&:before{
+				color: #0c1319;
+				line-height: 28px;
+			}
+		}
+		a{
+			color: #0c1319;
+		}
+	}
+	@include bp(sm){
+		display: block;
+	}
+}
+
+.additional-contacts-txt-wrapper{
+	padding-bottom: 25px;
+	border-bottom: 1px solid #f3f3f3;
+}
+
+.contacts-screen{
+	padding-top: 70px;
+	@include bp(md){
+		padding-top: 55px;
+	}
+	@include bp(sm){
+		padding-top: 25px;
+	}
+}
+
+.contacts-wrapper{	
+	padding-bottom: 75px;
+	border-bottom: 1px solid #f3f3f3;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	@include bp(md){
+		justify-content: space-around;
+    	flex-wrap: wrap;
+	}
+	@include bp(sm){
+		padding-bottom: 60px;
+		justify-content: center;
+		flex-direction: column;
+	}
+}
+
+.contacts-info{
+	display: flex;
+	@include bp(md){
+		order: 1;
+	}
+	@include bp(sm){
+		width: 290px;
+	}
+}
+
+.contacts-info__pic{
+	width: 60px;
+	margin-right: 25px;
+}
+
+.contacts-info__txt{
+	max-width: 200px;
+	font-size: 16px;
+	line-height: 24px;
+	color: #0c1319;
+	span{
+		display: block;
+	}
+	a{
+		color: #0c1319;
+		text-decoration: none;
+		box-shadow: inset 0 -1px #fff, inset 0 -2px #a9dad9;
+		&:hover, &:focus{
+			color: #0c1319;
+			text-decoration: none;
+		}
+	}
+}
+
+.address-info{
+	display: flex;
+	align-items: center;
+	@include bp(md){
+		order: 2;
+	}
+	@include bp(sm){
+		width: 290px;
+		margin-top: 50px;
+	}
+}
+
+.address-info__pic{
+	width: 60px;
+	margin-right: 25px;
+}
+
+.address-info__txt{
+	max-width: 200px;
+	font-size: 16px;
+	line-height: 24px;
+	color: #0c1319;
+	span{
+		display: block;
+	}
+}
+
+.socials-info{
+	@include bp(md){
+		order: 3;
+		margin-top: 65px;
+	}
+	@include bp(sm){
+		margin-top: 50px;
+	}
+}
+
+.socials-info__title{
+	color: #0c1319;
+	font-size: 16px;
+	line-height: 28px;
+	display: block;
+	margin-bottom: 10px;
+}
+
+.contacts-menu__socials{
+	display: flex;
+	justify-content: space-between;
+	width: 156px;
+}
+
+.contacts-menu__socials-link{
+	color: #0c1319;
+	text-decoration: none;	
+	font-size: 20px;
+	display: block;
+	&.icon-youtube-play{
+		font-size: 26px;
+	    position: relative;
+	    top: -3px;
+	}
+	&:before{
+		margin: 0;
+	}
+	&:hover, &:focus{
+		color: #65aaa9;
+		text-decoration: none;
+	}
+}

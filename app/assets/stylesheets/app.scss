@@ -1,0 +1,111 @@
+@import 'variables';
+@import 'vendor';
+@import 'fonts';
+@import 'mixin';
+
+html, body{
+  min-width: 320px;
+  overflow-x: hidden;
+}
+
+body{
+	font-size: 16px;
+	min-width: 320px;
+	position: relative;
+	line-height: 1;
+	font-family: $default-font;
+	opacity: 1;	
+	background-color: #fff;
+	color: #000;
+	min-height: 100vh;
+}
+
+section{
+	width: 100%;
+}
+
+ul, li{
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+
+h1, h2, h3, h4{
+	margin: 0;
+}
+
+a{
+	color: #373737;
+	&:hover, &:focus{
+		color: #373737;
+	}
+}
+
+*{
+	outline: none !important;
+	&:focus{
+		outline: none !important;
+	}
+}
+
+::placeholder{
+	font-size: 14px;
+	font-family: $default-font;
+	color: #999;
+}
+
+// Шапка
+@import 'header';
+
+// главная
+@import 'section-1';
+@import 'section-2';
+@import 'section-3';
+@import 'section-4';
+@import 'section-5';
+@import 'section-6';
+@import 'section-7';
+@import 'section-8';
+@import 'section-9';
+
+// Подвал
+@import 'footer';
+
+// Breadcrimbs
+@import 'breadcrimbs';
+
+// Pagination
+@import 'pagination';
+
+// Popup
+@import 'popup';
+
+// About
+@import 'about';
+
+// Press
+@import 'press';
+
+// Blog
+@import 'blog';
+
+// Blog Post
+@import 'blog-post';
+
+// Video
+@import 'video';
+
+// Tenant Representation, Owner Representation
+@import 'tenant';
+
+// Investment Sales
+@import 'investment';
+
+// Listings
+@import 'listings';
+
+// Contacts
+@import 'contacts';
+
+// Wordpress
+@import 'wp';

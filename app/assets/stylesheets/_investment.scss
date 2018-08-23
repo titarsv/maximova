@@ -1,0 +1,234 @@
+.investment-txt-screen{
+	padding: 95px 0 65px;
+	@include bp(md){
+		padding: 75px 0 45px;
+	}
+	@include bp(sm){
+		padding: 50px 0 35px;
+	}
+}
+
+.investment-txt{
+	width: 855px;
+	margin: 70px auto 0;
+	color: #0c1319;
+	font-size: 16px;
+	line-height: 28px;
+	@include bp(md){
+		width: 100%;
+		margin-top: 55px;
+	}
+	@include bp(sm){
+		margin-top: 30px;
+	}
+}
+
+.investment-screen{
+	padding: 95px 0 70px;
+	@include bp(md){
+		padding: 80px 0 55px;
+	}
+	@include bp(sm){
+		padding: 75px 0 40px;
+	}
+}
+
+.sorting-tabs__wrapper{
+	display: flex;
+	justify-content: center;
+	margin-top: 24px;
+	margin-bottom: 70px;
+	@include bp(md){
+		margin-bottom: 55px;
+	}
+	@include bp(md){
+		margin-bottom: 40px;
+	}
+}
+
+.sorting-tabs{
+	display: flex;
+	align-items: center;
+}
+
+.sorting-item{
+	height: 25px;
+	line-height: 25px;
+	padding: 0 10px;
+	color: #fff;
+	border-radius: 2px;
+	font-size: 14px;
+	margin-right: 24px;
+	text-align: center;
+	cursor: pointer;
+	&:last-child{
+		margin-right: 0;
+	}
+	&.new, &.exlusive{
+		background-color: #00a685;
+	}
+	&.old{
+		background-color: #0066a6;
+	}
+	&.soon, &.sold{
+		background-color: #a61400;
+	}
+	&.investment, &.office, &.hotel, &.retail{
+		background-color: #0c1319;
+	}
+}
+
+.listings-wrapper{
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+.listing-item{
+	width: 520px;
+	height: 320px;
+	position: relative;
+	margin-bottom: 60px;
+	display: none;
+	&.active{
+		display: block;
+	}
+	@include bp(lg){
+		width: 450px;
+	}
+	@include bp(md){
+		width: 100%;
+		height: 400px;
+		margin-bottom: 50px;
+	}
+	@include bp(sm){
+		height: 65vw;
+		min-height: 220px;
+		margin-bottom: 40px;
+	}
+	&:hover, &:focus{
+		.listing-item__bg{
+			opacity: 0.5;
+		}
+		.listing-item__btn{
+			transform: translateX(-50%) translateY(-50%);
+			opacity: 1;			
+		}
+	}
+}
+
+.listing-item__pic{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.listing-item__bg{
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	pointer-events: none;
+	background-color: #65aaa9;
+	opacity: 0;
+	z-index: 1;
+	transition: .2s linear;
+}
+
+.listing-item__labels{
+	position: absolute;
+	top: 0;
+	left: -6px;
+	z-index: 2;
+}
+
+.listing-item__label{
+	margin-top: 16px;
+	height: 25px;
+	line-height: 25px;
+	padding: 0 10px;
+	color: #fff;
+	border-radius: 2px;
+	font-size: 14px;
+	text-align: center;
+	width: max-content;
+	&.new, &.exlusive{
+		background-color: #00a685;
+	}
+	&.old{
+		background-color: #0066a6;
+	}
+	&.soon, &.sold{
+		background-color: #a61400;
+	}
+	&.investment, &.office, &.hotel, &.retail{
+		background-color: #0c1319;
+	}
+}
+
+.listing-item__title{
+	font-family: "PTSerif-Regular";
+	font-size: 20px;
+	line-height: 28px;
+	color: #fff;
+	background-color: rgba(12, 19, 25, 0.7);
+	padding: 9px 15px;
+	position: absolute;
+	width: 100%;
+	bottom: 0;
+	left: 0;
+	z-index: 2;
+	@include bp(sm){
+		font-size: 16px;
+		line-height: 24px;
+	}
+}
+
+.listing-item__btn{
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translateX(-50%) translateY(20%);
+	opacity: 0;
+	padding: 7px 22px;
+	font-size: 16px;
+	line-height: 28px;
+	text-align: center;
+	font-family: "Mukta-Bold";
+	color: #fff;
+	background-color: #0c1319;
+	transition: .2s linear;
+	text-transform: uppercase;
+	border-radius: 2px;
+	z-index: 2;
+	border: none;
+	&:hover, &:focus{
+		color: #fff;
+		background-color: #1e3344;
+		text-decoration: none;
+		box-shadow: 4px 6px 25px rgba(12, 19, 25, 0.2);
+	}
+}
+
+.listings-btn{
+	display: block;
+	margin: 0 auto;
+	padding: 7px 22px;
+	width: 136px;
+	font-size: 16px;
+	line-height: 28px;
+	text-align: center;
+	font-family: "Mukta-Bold";
+	color: #fff;
+	background-color: #0c1319;
+	transition: .2s linear;
+	text-transform: uppercase;
+	border-radius: 2px;
+	&:hover, &:focus{
+		color: #fff;
+		background-color: #1e3344;
+		text-decoration: none;
+		box-shadow: 4px 6px 25px rgba(12, 19, 25, 0.2);
+	}
+}

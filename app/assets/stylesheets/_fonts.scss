@@ -1,0 +1,18 @@
+@import 'mixin';
+@import 'icons';
+
+@include font-face("Mukta-Bold", "../fonts/Mukta-Bold/Mukta-Bold");
+@include font-face("Mukta-ExtraBold", "../fonts/Mukta-ExtraBold/Mukta-ExtraBold");
+@include font-face("Mukta-ExtraLight", "../fonts/Mukta-ExtraLight/Mukta-ExtraLight");
+@include font-face("Mukta-Light", "../fonts/Mukta-Light/Mukta-Light");
+@include font-face("Mukta-Medium", "../fonts/Mukta-Medium/Mukta-Medium");
+@include font-face("Mukta-SemiBold", "../fonts/Mukta-SemiBold/Mukta-SemiBold");
+@include font-face("Mukta-Regular", "../fonts/Mukta-Regular/Mukta-Regular");
+@include font-face("PlayfairDisplay-Black", "../fonts/PlayfairDisplay-Black/PlayfairDisplay-Black");
+@include font-face("PlayfairDisplay-BlackItalic", "../fonts/PlayfairDisplay-BlackItalic/PlayfairDisplay-BlackItalic");
+@include font-face("PlayfairDisplay-Bold", "../fonts/PlayfairDisplay-Bold/PlayfairDisplay-Bold");
+@include font-face("PlayfairDisplay-BoldItalic", "../fonts/PlayfairDisplay-BoldItalic/PlayfairDisplay-BoldItalic");
+@include font-face("PlayfairDisplay-Italic", "../fonts/PlayfairDisplay-Italic/PlayfairDisplay-Italic");
+@include font-face("PlayfairDisplay-Regular", "../fonts/PlayfairDisplay-Regular/PlayfairDisplay-Regular");
+@include font-face("PTSerif-Regular", "../fonts/PTSerif-Regular/PTSerif-Regular");
+@include font-face("PTSerif-Bold", "../fonts/PTSerif-Bold/PTSerif-Bold");
