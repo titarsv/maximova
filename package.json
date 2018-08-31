@@ -16,9 +16,11 @@
     "babel-core": "6.13.2",
     "babel-loader": "6.2.4",
     "babel-preset-es2015": "6.13.2",
+    "backbone": "1.3.3",
     "bootstrap": "^3.3.7",
     "bower": "^1.8.0",
     "chai": "3.5.0",
+    "chosen-js": "^1.6.2",
     "css-loader": "^0.23.1",
     "eslint": "3.2.2",
     "eslint-config-rambler": "0.2.2",
@@ -28,10 +30,12 @@
     "extract-text-webpack-plugin": "1.0.1",
     "fancyselect": "^1.0.3",
     "file-loader": "^0.9.0",
+    "fullpage.js": "2.8.2",
     "glob": "7.0.5",
     "html-loader": "^0.4.5",
     "html-webpack-plugin": "2.22.0",
     "image-webpack-loader": "^3.3.1",
+    "jquery": "3.1.0",
     "jquery.maskedinput": "^1.4.1",
     "jquery.nicescroll": "^3.7.6",
     "jscrollpane": "^2.0.22",
@@ -46,10 +50,11 @@
     "lg-zoom": "^1.0.4",
     "lightgallery": "^1.3.9",
     "lodash": "4.14.2",
+    "magnific-popup": "^1.1.0",
     "manifest-revision-webpack-plugin": "0.3.0",
     "material-shadows": "^3.0.1",
     "mocha": "3.0.2",
-    "node-sass": "^3.13.1",
+    "node-sass": "^4.9.3",
     "npmlog": "4.0.0",
     "os": "^0.1.1",
     "path": "0.12.7",
@@ -65,22 +70,17 @@
     "style-loader": "^0.13.1",
     "stylint": "1.5.6",
     "stylint-loader": "1.0.0",
-    "sumoselect": "^3.0.5",
     "stylus": "0.54.5",
     "stylus-loader": "2.2.0",
+    "sumoselect": "^3.0.5",
+    "sweetalert2": "^6.4.3",
     "testem": "1.10.3",
+    "underscore": "1.8.3",
     "url": "^0.11.0",
     "url-loader": "^0.5.8",
     "webpack": "^1.13.1",
     "webpack-dev-server": "1.14.1",
-    "webpack-uglify-parallel": "^0.1.3",
-    "backbone": "1.3.3",
-    "chosen-js": "^1.6.2",
-    "fullpage.js": "2.8.2",
-    "jquery": "3.1.0",
-    "magnific-popup": "^1.1.0",
-    "sweetalert2": "^6.4.3",
-    "underscore": "1.8.3"
+    "webpack-uglify-parallel": "^0.1.3"
   },
   "babel": {
     "presets": [
@@ -93,7 +93,5 @@
   },
   "author": "Mike Chernobrov <m.chernobrov@rambler-co.ru> (http://rambler-co.ru)",
   "license": "MIT",
-  "dependencies": {
-
-  }
+  "dependencies": {}
 }

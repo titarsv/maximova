@@ -35,7 +35,7 @@
 	&:hover, &:focus{
 		text-decoration: none;
 		.blog-item__pic-wrapper{
-			box-shadow: 4px 6px 25px rgba(12, 19, 25, 0.3);
+			box-shadow: 4px 6px 15px rgba(12, 19, 25, 0.3);
 			&:after{
 				height: 8px;
 				opacity: 1;
@@ -49,7 +49,7 @@
 
 .blog-item__pic-wrapper{
 	position: relative;
-	box-shadow: 4px 6px 25px rgba(12, 19, 25, 0.2);
+	//box-shadow: 4px 6px 25px rgba(12, 19, 25, 0.2);
 	margin-bottom: 10px;
 	height: 320px;
 	@include bp(sm){

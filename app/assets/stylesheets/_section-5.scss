@@ -76,6 +76,7 @@
 		border-radius: 2px;
 		cursor: pointer;
 		z-index: 3;
+		transition: .3s;
 		@include bp(md){
 			right: 0;
 			top: auto;
@@ -97,12 +98,15 @@
 			}
 		}
 		&:hover{
-			border: 1px solid #0c1319;
+			//border: 1px solid #0c1319;
+			border: 1px solid #a9dad9;
 			@include bp(sm){
 				border: none;
 			}
 			&:before{
-				color: #0c1319;
+				//color: #0c1319;
+				font-size: 20px;
+				color: #a9dad9;
 			}
 		}
 		&.slick-disabled{
