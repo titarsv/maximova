@@ -20,38 +20,21 @@
                     <span class="footer-logo__descr">Licensed Real Estate Associate Broker</span>
                 </a>
                 <ul class="footer-menu first">
-                    <li class="footer-menu__item">
-                        <a class="footer-menu__link" href="about.html">About Me</a>
-                    </li>
-                    <li class="footer-menu__item">
-                        <a class="footer-menu__link" href="press.html">In the Press</a>
-                    </li>
-                    <li class="footer-menu__item">
-                        <a class="footer-menu__link" href="blog-post.html">Blog</a>
-                    </li>
-                    <li class="footer-menu__item">
-                        <a class="footer-menu__link" href="video.html">Videos</a>
-                    </li>
-                    <li class="footer-menu__item">
-                        <a class="footer-menu__link" href="listings.html">Featured Listings</a>
-                    </li>
-                    <li class="footer-menu__item">
-                        <a class="footer-menu__link" href="#">Get in Touch</a>
-                    </li>
+	                <?php wp_nav_menu(array(
+		                'menu' => 'Footer 1',
+		                'container' => false,
+		                'items_wrap' => '%3$s',
+		                'depth' => 1
+	                )); ?>
                 </ul>
                 <ul class="footer-menu second">
-                    <li class="footer-menu__item">
-                        <a class="footer-menu__link" href="tenant.html">Tenant Representation <span>(Retail / Office)</span></a>
-                    </li>
-                    <li class="footer-menu__item">
-                        <a class="footer-menu__link" href="owner.html">Owner Representation <span>(Retail / Office)</span></a>
-                    </li>
-                    <li class="footer-menu__item">
-                        <a class="footer-menu__link" href="investment.html">Investment Sales & Capital Markets <span>(Valuation & advisory)</span></a>
-                    </li>
-                    <li class="footer-menu__item">
-                        <a class="footer-menu__link" href="#">Consulting & Learning Services</a>
-                    </li>
+	                <?php wp_nav_menu(array(
+		                'menu' => 'Footer 2',
+		                'container' => false,
+		                'items_wrap' => '%3$s',
+		                'depth' => 1,
+                        'walker' => new Footer_Walker_Nav_Menu()
+	                )); ?>
                 </ul>
                 <ul class="footer-menu__socials">
                     <li class="footer-menu__socials-item">

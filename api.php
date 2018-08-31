@@ -1,16 +1,20 @@
 <?php
 session_start();
 
+require_once 'wp-load.php';
+require_once ABSPATH . '/wp-admin/includes/taxonomy.php';
+
+date_default_timezone_set('America/New_York');
+
 $domain = $_SERVER['HTTP_HOST'];
 $_SESSION['http_host'] = $domain.$_SERVER['SCRIPT_URL'];
 
-$domain = 'elos.triplefork.com.ua';
-$sendTo = 'info@salon-elos.ru';
-$sendToIms = 'zayavkiclient@gmail.com';
-$from = "info@$domain";
+$domain = str_replace(array('http://', 'https://'),'', get_option('siteurl'));
+$sendTo = get_option('admin_email');
+$from = "site@$domain";
 $title = '';
 
-$subject = "Заявка $domain " . $title;
+$subject = "Request $domain " . $title;
 
 if(count($_FILES)){
 	//print_r($_FILES);
@@ -49,9 +53,9 @@ function send_mail($to, $thm, $html, $path) {
     fclose($fp); 
 
     $boundary = "--".md5(uniqid(time())); // генерируем разделитель 
-    $headers .= "MIME-Version: 1.0\n"; 
+    $headers = "MIME-Version: 1.0\n";
     $headers .="Content-Type: multipart/mixed; boundary=\"$boundary\"\n"; 
-    $multipart .= "--$boundary\n"; 
+    $multipart = "--$boundary\n";
 
     $kod = 'utf-8';
     $multipart .= "Content-Type: text/html; charset=$kod\n"; 
@@ -80,23 +84,16 @@ if (array_key_exists('data', $_POST)){
 	$msg = ""; 
 
     $msg .= "<html><body style='font-family:Arial,sans-serif;'>";
-    $msg .= "<h2 style='color:#161616;font-weight:bold;font-size:30px;border-bottom:2px dotted #bd0707;'>Новая заявка на сайте $domain " . $title . "</h2>" . $eol;
+    $msg .= "<h2 style='color:#161616;font-weight:bold;font-size:30px;border-bottom:2px dotted #bd0707;'>New request on the site $domain " . $title . "</h2>" . $eol;
 
-    $data = json_decode($_POST['data']);
-    $session_data = ['referer' => 'Заявка пришла со страницы', 'sourse' => 'Поисковая система', 'term' => 'Ключ', 'campaign' => 'Кампания'];
+    $data = json_decode(str_replace('\"','"',$_POST['data']));
+    $session_data = ['sourse' => 'Поисковая система', 'term' => 'Ключ', 'campaign' => 'Кампания'];
 
     if (!isset($data->phone) || empty($data->phone->val)) {
         header("HTTP/1.0 404 Not Found");
         echo '{"status":"error", "message":"Не заполнено поле телефон"}';
         die();
     }
-
-    $stat = array(
-        'token' => $token,
-        'ip' => $_SERVER['REMOTE_ADDR'],
-        'user_agent' => isset($_SERVER['HTTP_USER_AGENT']) ? $_SERVER['HTTP_USER_AGENT'] : NULL,
-        'additional_user_stat' => $_POST['data']
-    );
 
     foreach ($data as $key => $params) {
         if (!empty($params->title) && !empty($params->val)) {
@@ -105,26 +102,24 @@ if (array_key_exists('data', $_POST)){
             if (isset($session_data[$key]))
                 unset($session_data[$key]);
         }
-		if(empty($params->val)){
-			$stat[$key] = 'Лось!';
-		}else{
-        	$stat[$key] = prepare_data($params->val, $key);
-		}
-
     }
 
     foreach ($session_data as $key => $title) {
         if (array_key_exists($key, $_SESSION)) {
             $val = prepare_data($_SESSION[$key], $key);
             $msg .= "<p><strong>$title:</strong> $val</p>" . $eol;
-
-            if (!empty($val)) {
-                $stat[$key] = $val;
-            }
         }
     }
 	
 	$msg .= "</body></html>";
+
+    $id = wp_insert_post(array(
+        'post_title'    => $subject.(!empty($data->get->val)?' ('.$data->get->val.')':''),
+        'post_content'  => $msg,
+        'post_date'     => date('Y-m-d H:i:s'),
+        'post_type'     => 'request',
+        'post_status'   => 'publish',
+    ));
 	
 	if(!empty($files)){	
 		
@@ -133,15 +128,9 @@ if (array_key_exists('data', $_POST)){
 		}
 		
 	}
-	
-	/*if($data->phone->val == '+38 (000) 000-00-00'){
-		if(!empty($path))
-			send_mail($sendToIms, $subject, $msg, $path);
-		die();
-	}*/
 
 	if(!empty($path)){
-		if (send_mail($sendTo, $subject, $msg, $path) && send_mail($sendToIms, $subject, $msg, $path)) {
+		if (send_mail($sendTo, $subject, $msg, $path)) {
 			header("HTTP/1.0 200 OK");
 			echo '{"status":"success"}';
 		} else {
@@ -149,7 +138,7 @@ if (array_key_exists('data', $_POST)){
 			echo '{"status":"error"}';
 		}
 	}else{
-		if ((mail($sendTo, $subject, $msg, $headers)) && (mail($sendToIms, $subject, $msg, $headers))) {
+		if (mail($sendTo, $subject, $msg, $headers)) {
 			header("HTTP/1.0 200 OK");
 			echo '{"status":"success"}';
 		} else {
