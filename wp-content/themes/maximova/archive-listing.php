@@ -64,7 +64,7 @@ get_header(); ?>
                                     <li class="listing-item__label exlusive">Exclusive</li>
                                 </ul>
                                 <span class="listing-item__title"><?php the_title(); ?></span>
-                                <button class="listing-item__btn">REQUEST</button>
+                                <button class="listing-item__btn popup-btn" data-mfp-src="#form-popup">REQUEST</button>
                             </li>
 
 			                <?php
