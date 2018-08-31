@@ -52,19 +52,33 @@
 	width: 33.33333%;
 	margin-bottom: 110px;
 	position: relative;
+	padding-left: 50px;
+	@include bp (lg){
+		padding-left: 20px;
+	}
 	@include bp(md){
 		width: 50%;
 		margin-bottom: 80px;
+		padding-left: 10px;
 	}
 	&:before{
 		display: none;
 		position: absolute;
-		left: 0;
+		left: 55px;
 		top: -46px;
 		content: '';
 		width: 32px;
 		height: 2px;
 		background-color: #a9dad9;
+		@include bp (lg){
+			left: 27px;
+		}
+		@include bp(md){
+			width: 50%;
+			margin-bottom: 80px;
+			padding-left: 10px;
+			left: 7px;
+		}
 	}
 	&:nth-child(3){
 		@include bp(md){

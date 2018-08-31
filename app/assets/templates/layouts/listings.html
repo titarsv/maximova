@@ -238,7 +238,7 @@
                         <li class="listing-item__label exlusive">Exclusive</li>
                     </ul>
                     <span class="listing-item__title">4 star Superior Wellness/Medical Hotel for sale </span>
-                    <button class="listing-item__btn">REQUEST</button>
+                    <button class="listing-item__btn popup-btn" data-mfp-src="#form-popup">REQUEST</button>
                 </li>
                 <li class="listing-item active investment exlusive">
                     <img class="listing-item__pic" src="../../images/listings/2.jpg" alt="">
@@ -407,6 +407,45 @@
             <iframe width="1280" height="315" src="https://www.youtube.com/embed/D0mRVJbGVSE?showinfo=0" frameborder="0" allowfullscreen></iframe>
             <button title="Close (Esc)" type="button" class="mfp-close">×</button>
         </div>
+    </div>
+</div>
+
+<div class="mfp-hide">
+    <div id='form-popup' class="popup">
+       <div class="container">
+           <div class="row">
+               <div class="col-sm-8 col-sm-offset-2 col-xs-12">
+                   <div class="form-popup__container">
+                       <form class="feedback-form">
+                           <p class="form-popup__title">Please, fill this form: </p>
+                           <div class="feedback-form__row">
+                               <div class="feedback-form__input-wrapper">
+                                   <input type="text" name="name" class="feedback-form__input" required="" placeholder="Full Name">
+                                   <label class="feedback-form__label">Full Name</label>
+                                    <span></span>
+                               </div>
+                           </div>
+                           <div class="feedback-form__row">
+                               <div class="feedback-form__input-wrapper">
+                                   <input type="text" name="name" class="feedback-form__input" required="" placeholder="E-mail">
+                                   <label class="feedback-form__label">E-mail</label>
+                                   <span></span>
+                               </div>
+                           </div>
+                           <div class="feedback-form__row">
+                               <div class="feedback-form__input-wrapper">
+                                   <input type="text" name="phone" class="feedback-form__input" required="" placeholder="Phone Number">
+                                   <label class="feedback-form__label">Phone Number</label>
+                                   <span></span>
+                               </div>
+                           </div>
+                           <button class="feedback-form__btn" type="submit">Submit</button>
+                       </form>
+                       <button title="Close (Esc)" type="button" class="mfp-close">×</button>
+                   </div>
+               </div>
+           </div>
+       </div>
     </div>
 </div>
 

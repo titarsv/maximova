@@ -1,0 +1,130 @@
+.event-container{
+  .page-title{
+    margin-bottom: 35px;
+    &:before{
+      display: none;
+    }
+  }
+}
+
+.event-item{
+  margin: 15px 0 25px;
+  position: relative;
+  .services-btn{
+    @include bp (xs){
+    margin-top: 20px;
+  }
+  }
+  &::before{
+    font-family: "PTSerif-Regular";
+    position: absolute;
+    z-index: -1;
+    top: -43px;
+    left: 0px;
+    font-size: 9em;
+    color: #f9f9f9;
+    @include bp (xs){
+      font-size: 6em;
+    }
+  }
+    &.one{
+      &::before{
+        content: '01';
+      }
+    }
+  &.two{
+      &::before{
+        content: '02';
+      }
+    }
+  &.three{
+    &::before{
+      content: '03';
+    }
+  }
+  &.four{
+    &::before{
+      content: '04';
+    }
+  }
+  &.five{
+    &::before{
+      content: '05';
+    }
+  }
+  &.last-event{
+    opacity: .6;
+    display: block;
+    &:hover{
+      opacity: 1;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    .event-title{
+      font-size: 20px;
+      heigth: 40px;
+      @include bp (xs){
+        font-size: 18px;
+        margin-bottom: 10px;
+      }
+    }
+    .services-btn{
+        margin-top: 20px;
+      }
+  }
+}
+
+.event-title{
+  font-family: "PTSerif-Regular";
+  color: #0c1319;
+  font-size: 24px;
+  margin-bottom: 10px;
+  height: 55px;
+  @include bp (xs){
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+}
+.event-date{
+  color: #636c79;
+  font-size: 18px;
+  font-family: "Mukta-Regular";
+  margin-bottom: 5px;
+  @include bp (xs){
+    font-size: 16px;
+    margin-top: 10px;
+  }
+}
+
+.row-margin-top{
+  margin-top: 60px;
+  @include bp (sm){
+    margin-top: 0;
+  }
+}
+
+.row-padding-bottom{
+  padding-bottom: 30px;
+  &.underline{
+    border-bottom: 1px solid #f3f3f3;
+  }
+}
+
+.more-events-btn{
+  display: block;
+  width: 200px;
+  padding: 15px 0;
+  color: #fff;
+  font-family: "Mukta-Bold";
+  font-size: 20px;
+  text-align: center;
+  margin: 0 auto 50px;
+  outline: none;
+  background: #000;
+  &:hover{
+    background: rgba(0, 0, 0, 0.78);
+    font-size: 20px;
+    color: #fff;
+    text-decoration: none;
+  }
+}
