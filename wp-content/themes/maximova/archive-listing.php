@@ -201,5 +201,44 @@ get_header(); ?>
     </div>
 </div>
 
+<div class="mfp-hide">
+    <div id='form-popup' class="popup">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-8 col-sm-offset-2 col-xs-12">
+                    <div class="form-popup__container">
+                        <form class="feedback-form">
+                            <p class="form-popup__title">Please, fill this form: </p>
+                            <div class="feedback-form__row">
+                                <div class="feedback-form__input-wrapper">
+                                    <input type="text" name="name" class="feedback-form__input" required="" placeholder="Full Name">
+                                    <label class="feedback-form__label">Full Name</label>
+                                    <span></span>
+                                </div>
+                            </div>
+                            <div class="feedback-form__row">
+                                <div class="feedback-form__input-wrapper">
+                                    <input type="text" name="name" class="feedback-form__input" required="" placeholder="E-mail">
+                                    <label class="feedback-form__label">E-mail</label>
+                                    <span></span>
+                                </div>
+                            </div>
+                            <div class="feedback-form__row">
+                                <div class="feedback-form__input-wrapper">
+                                    <input type="text" name="phone" class="feedback-form__input" required="" placeholder="Phone Number">
+                                    <label class="feedback-form__label">Phone Number</label>
+                                    <span></span>
+                                </div>
+                            </div>
+                            <button class="feedback-form__btn" type="submit">Submit</button>
+                        </form>
+                        <button title="Close (Esc)" type="button" class="mfp-close">×</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 </body>
 </html>
