@@ -549,8 +549,8 @@
 .companies-wrapper{
 	padding: 95px 72px 0;
 	height: 605px;
-	background: url(../images/companies-bg.png) no-repeat;
-	background-size: cover;
+	//background: url(../images/companies-bg.png) no-repeat;
+	//background-size: cover;
 	position: relative;
 	@include bp(lg){
 		padding: 95px 30px 0;
@@ -634,15 +634,19 @@
 			height: 84px;
 		}
 		&:hover{
-			//background-position: 0 -126px;
-			background: url(../images/companies/color/1.png) no-repeat;
-			background-size: contain;
-			//@include bp(lg){
-			//	background-position: 0 -105px;
-			//}
-			//@include bp(md){
-			//	background-position: 0 -84px;
-			//}
+			background: url(../images/companies/1.png) no-repeat;
+			background-position: 0 -126px;
+			@include bp(lg){
+				background-position: 0 -105px;
+			}
+			@include bp(md){
+				background-position: 0 -84px;
+			}
+		}
+		&.color{
+			background: url(../images/companies/11.png) no-repeat;
+			background-position: 0 0;
+			background-size: cover;
 		}
 	}
 	&.ci2{
@@ -669,6 +673,11 @@
 			//	background-position: 0 -50px;
 			//}
 		}
+		&.color{
+			background: url(../images/companies/21.png) no-repeat;
+			background-position: 0 0;
+			background-size: cover;
+		}
 	}
 	&.ci3{
 		background: url(../images/companies/3.png) no-repeat;
@@ -694,9 +703,25 @@
 			//	background-position: 0 -28px;
 			//}
 		}
+		&.color{
+			background: url(../images/companies/3.png) no-repeat;
+			background-position: 0 -42px;
+			background-size: cover;
+			&:hover{
+				background: url(../images/companies/3.png) no-repeat;
+				background-position: 0 -42px !important;
+			}
+			@include bp(lg){
+				background-position: 0 -35px;
+			}
+			@include bp(md){
+				background-position: 0 -28px;
+			}
+		}
 	}
 	&.ci4{
 		background: url(../images/companies/4.png) no-repeat;
+		background-position: 0 -22px;
 		width: 180px;
 		height: 22px;
 		background-size: cover;
@@ -708,20 +733,24 @@
 			width: 120px;
 			height: 14px;
 		}
-		&:hover{
-			background: url(../images/companies/color/4.png) no-repeat;
-			background-size: contain;
-			//background-position: 0 -22px;
-			//@include bp(lg){
-			//	background-position: 0 -18px;
-			//}
-			//@include bp(md){
-			//	background-position: 0 -15px;
-			//}
+		//&:hover{
+		//	background: url(../images/companies/4.png) no-repeat;
+		//}
+		@include bp(lg){
+			background-position: 0 -18px;
+		}
+		@include bp(md){
+			background-position: 0 -15px;
+		}
+		&.color{
+			background: url(../images/companies/4.png) no-repeat;
+			background-position: initial;
+			background-size: cover;
 		}
 	}
 	&.ci5{
 		background: url(../images/companies/5.png) no-repeat;
+		background-position: 0 -12px;
 		width: 180px;
 		height: 12px;
 		background-size: cover;
@@ -735,43 +764,53 @@
 		}
 		&:hover{
 			background: url(../images/companies/color/5.png) no-repeat;
-			background-size: contain;
-			//background-position: 0 -12px;
-			//@include bp(lg){
-			//	background-position: 0 -11px;
-			//}
-			//@include bp(md){
-			//	background-position: 0 -8px;
-			//}
+			background-position: initial;
+		}
+		@include bp(lg){
+			background-position: 0 -11px;
+		}
+		@include bp(md){
+			background-position: 0 -8px;
+		}
+		&.color{
+			background: url(../images/companies/5.png) no-repeat;
+			background-position: initial;
+			background-size: cover;
 		}
 	}
-	&.ci6{
+	&.ci6 {
 		background: url(../images/companies/6.png) no-repeat;
+		background-position: 0 -24px;
 		width: 184px;
 		height: 24px;
 		background-size: cover;
-		@include bp(lg){
+		@include bp(lg) {
 			width: 150px;
 			height: 21px;
 		}
-		@include bp(md){
+		@include bp(md) {
 			width: 120px;
 			height: 16px;
 		}
-		&:hover{
+		&:hover {
 			background: url(../images/companies/color/6.png) no-repeat;
-			background-size: contain;
-			//background-position: 0 -24px;
-			//@include bp(lg){
-			//	background-position: 0 -21px;
-			//}
-			//@include bp(md){
-			//	background-position: 0 -16px;
-			//}
+			background-position: initial;
+		}
+		@include bp(lg) {
+			background-position: 0 -21px;
+		}
+		@include bp(md) {
+			background-position: 0 -16px;
+		}
+		&.color {
+			background: url(../images/companies/6.png) no-repeat;
+			background-position: initial;
+			background-size: cover;
 		}
 	}
 	&.ci7{
 		background: url(../images/companies/7.png) no-repeat;
+		background-position: 0 -73px;
 		width: 180px;
 		height: 73px;
 		background-size: cover;
@@ -785,18 +824,24 @@
 		}
 		&:hover{
 			background: url(../images/companies/color/7.png) no-repeat;
+			background-position: initial;
 			background-size: contain;
-			//background-position: 0 -73px;
-			//@include bp(lg){
-			//	background-position: 0 -61px;
-			//}
-			//@include bp(md){
-			//	background-position: 0 -49px;
-			//}
+		}
+		@include bp(lg){
+			background-position: 0 -73px;
+		}
+		@include bp(md){
+			background-position: 0 -49px;
+		}
+		&.color{
+			background: url(../images/companies/7.png) no-repeat;
+			background-position: initial;
+			background-size: cover;
 		}
 	}
 	&.ci8{
 		background: url(../images/companies/8.png) no-repeat;
+		background-position: 0 -108px;
 		width: 162px;
 		height: 108px;
 		background-size: cover;
@@ -810,14 +855,18 @@
 		}
 		&:hover{
 			background: url(../images/companies/color/8.png) no-repeat;
-			background-size: contain;
-			//background-position: 0 -108px;
-			//@include bp(lg){
-			//	background-position: 0 -94px;
-			//}
-			//@include bp(md){
-			//	background-position: 0 -74px;
-			//}
+			background-position: initial;
+		}
+		@include bp(lg){
+			background-position: 0 -94px;
+		}
+		@include bp(md){
+			background-position: 0 -74px;
+		}
+		&.color{
+			background: url(../images/companies/8.png) no-repeat;
+			background-position: initial;
+			background-size: cover;
 		}
 	}
 }
